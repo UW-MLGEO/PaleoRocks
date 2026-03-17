@@ -52,8 +52,8 @@ With our model, we aim to build on the existing body of ML in paleontology by:
 
 ### Training Data
 - Classified thin section images of samples from the Lower to Middle Ordovician Pogonip Group strata of the Arrow Canyon Range, Nevada
-![Dahlia's three panel figure of dataset characterization.](Figures/469_Dahlia_Panel.jpg)
-![Caption for Dahlia's three panel figure of dataset characterization.](Figures/469_Dahlia_Caption.jpg)
+![Dahlia's three panel figure of dataset characterization.](../Figures/469_Dahlia_Panel.jpg)
+![Caption for Dahlia's three panel figure of dataset characterization.](../Figures/469_Dahlia_Caption.jpg)
 
 ### Validation Data
 - The classified patches were randomly split into 80% training and 20% validation

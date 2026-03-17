@@ -15,12 +15,13 @@
 - <b>Sophia Robillard:</b> Fourth year ESS undergraduate with expertise in isotope geochemistry and carbonate petrography. Led image preprocessing and contributed immensely to model evaluation, building training data, and visualizing results.
 
 ## <u> Introduction <u>
-Throughout the geosciences, and particularly in the realm of paleontology, point counting is the standardized method for quantifying the bulk composition of a rock from a single thin section (Flügel et al. 2010, Pruss and Clemente 2011). It is a particularly powerful tool for analyzing skeletal abundance through time. However, point counting is time consuming, lacks a uniform understanding of sources of error, and can be susceptible to observer bias resulting from different experience and confidence levels. Machine learning and AI tools have the potential to resolve many of these issues, allowing for the analysis of larger datasets and longer periods of time.
+Throughout the geosciences, and particularly in the realm of paleontology, point counting is the standardized method for quantifying the bulk composition of a rock from a single thin section (Flügel et al. 2010, Pruss and Clemente 2011). It is a particularly powerful tool for analyzing skeletal abundance through time. However, point counting is time consuming, lacks a uniform understanding of sources of error, and can be susceptible to observer bias resulting from different experience and confidence levels. Machine learning and AI tools have the potential to resolve many of these issues, allowing for the analysis of larger datasets spanning longer periods of time.
 
 ## <u> <b> Research Question: </b> </u>
 ### Can we build a model that can point count as well as an expert?
 Or, more specifically:
 ### Can our model predict if a thin section image does or does not contain a fossil?
+
 
 ## <u> Background & Motivation </u>
 ### ML in Paleontology
@@ -61,13 +62,13 @@ With our model, we aim to build on the existing body of ML in paleontology by:
 - Prior to splitting the patches into training or validation, one sample from each unit (Opb, Opc, Opd, Ope, and Opf) was randomly selected and all images from those samples were withheld. 
     - The model tested on the Arrow Canyon Range thin section images it had never seen before
 - Carbonate thin section images were obtained from CarbonateWorld, an online database and teaching tool for carbonate petrography.
-    - The model was tested on patches generated from 10 different CarbonateWorld thin sections, from different lithofacies and time periods than our own dataset.
+    - The model tested on patches generated from 10 different CarbonateWorld thin sections, from different lithofacies and time periods than our own dataset.
 
 ### <u> Outputs </u>
 - Classification of each patch as fossil or non-fossil
 - Metric of model accuracy
 
-## Glossary?
+## Glossary
 - <b> Sample: </b> A piece of rock that represents a discrete period of time.
 - <b> Thin section: </b> Part of a rock sample glued to a piece of glass and finely ground down so that light can pass through and the rock can be analyzed under a microscope.
     - The morphological and optical properties of each unique part of the thin section allow for the identification of fossil and non-fossil components, which in turn allows for the classification of the composition of the entire rock sample.

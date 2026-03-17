@@ -57,12 +57,16 @@ With our model, we aim to build on the existing body of ML in paleontology by:
 
 ### Validation Data
 - The classified patches were randomly split into 80% training and 20% validation
+![Example Patches](../Figures/Data-Examples/PatchesExample.png)
+*Figure 2: Example patches generated from our data. Patches labeled "1" contain fossils, while patches labeled "0" do not contain fossils".*
 
 ### Testing Data
 - Prior to splitting the patches into training or validation, one sample from each unit (Opb, Opc, Opd, Ope, and Opf) was randomly selected and all images from those samples were withheld. 
     - The model tested on the Arrow Canyon Range thin section images it had never seen before
 - Carbonate thin section images were obtained from CarbonateWorld, an online database and teaching tool for carbonate petrography.
     - The model tested on patches generated from 10 different CarbonateWorld thin sections, from different lithofacies and time periods than our own dataset.
+    ![CarbonateWorld Patches](../Figures/Data-Examples/UnseenDataExample.png)
+    *Figure 3: Example patches generated from CarbonateWorld thin sections. As in Figure 2, patches labeled "1" contain a fossil, while patches labeled "0" do not.*
 
 ### <u> Outputs </u>
 - Classification of each patch as fossil or non-fossil

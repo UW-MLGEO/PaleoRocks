@@ -48,6 +48,7 @@ Paleorocks/
 |    └── ReadME.md
 ├── Documentation/
 |   ├── Final_Writeup.md
+    ├── AI.md
 │   └── ReadME.md                   
 ├── Figures/
 │   ├── Data-Examples/                       
@@ -86,7 +87,7 @@ The **Image Preprocessing subfolder** contains all code to preprocess thin secti
 - **ThinSectionExtraction.ipynb**
     - Initial code to extract thin sections for testing data. A modified version was contained in the final CNN model codes. 
 
-The **Documentation folder** contains the final project writeup, including results of the model runs and discussions on future directions. 
+The **Documentation folder** contains the final project writeup, including results of the model runs and discussions on future directions. It also includes a markdown file which elaborates about our use of generative AI and coding resources. 
 
 The **Figures folder** contains all relevant figures generated from the code and used in the documentation markdown files. The **Data-Examples subfolder** contains examples of each stage of our data preparation, including an example of patches of our training data, patches of the unseen data from CarbonateWorld, and an example of data augmentation on one patch of our training data. 
 

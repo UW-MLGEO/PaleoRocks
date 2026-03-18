@@ -46,6 +46,7 @@ The top layers are:
 | Number of epochs (fine-tuning)     | 1 - 3     |
 | Learning rate (Adam optimizer)     | 1e-5      |
 | Dropout rate                       | 10%       |
+
 *Table 1: Tuned hyperparameters in final model. Both models (whole patch and center classification) used the same hyperparameters.*
 
 ### <u>Machine Learning Workflow</u>
@@ -79,15 +80,18 @@ The final machine learning workflow for the model is as follows:
 **Evaluate Model on Test and Unseen Data**
 </div>
 
+
 This workflow is summarized in **Figure 4**. 
 
 ![Sophia Final Figure: ML Workflow Summary](../Figures/Sophia_Final_Figure.png)
+
 *Figure 4: A machine learning workflow for patch generation and fossil classification is summarized.*
 ## <u>Results</u>
 Model accuracy and loss on the training and validation datasets increased and decreased, respectively, across each epoch of training. We saw a large jump in accuracy and loss once we finished training our top layers and began tuning the entire model. 
 
 ![Accuracy and Loss for Whole Patch Classification Model](../Figures/Model-Performance/LossAccWholePatch.png)
 ![Accuracy and Loss for Center Classification Model](../Figures/Model-Performance/LossAccCenterClassification.png)
+
 *Figure 5: Loss and accuracy plots for the whole patch (upper) and center patch (lower) classification models.*
 
 The final models in both cases do quite well at classifying the training and validation sets, with accuracy well over 90% in each case. In our final models, we were also able to overcome the tendency of the model to classify almost everything as having a fossil. 
@@ -126,13 +130,11 @@ The center patch classification model generally did not perform quite as well as
 
 Finally, we evaluated ROC curves to see how well our models compare to each other and to a random model. 
 
-<img src="../Figures/Model-Performance/ROCWholePatch.png" alt="ROC Whole Patch Classification Test Sections" width="300">
-<img src="../Figures/Model-Performance/ROCWholePatchUnseenData.png" alt="ROC Whole Patch Classification Unseen Data" width="300">
+<img src="../Figures/Model-Performance/ROCWholePatch.png" alt="ROC Whole Patch Classification Test Sections" width="200"><img src="../Figures/Model-Performance/ROCWholePatchUnseenData.png" alt="ROC Whole Patch Classification Unseen Data" width="200">
 
 *Figure 9: ROC curves for whole patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
-<img src="../Figures/Model-Performance/ROCCenterClass.png" alt="ROC Center Patch Classification Test Sections" width="300">
-<img src="../Figures/Model-Performance/ROCCenterClassUnseenData.png" alt="ROC Center Patch Classification Unseen Data" width="300">
+<img src="../Figures/Model-Performance/ROCCenterClass.png" alt="ROC Center Patch Classification Test Sections" width="200"><img src="../Figures/Model-Performance/ROCCenterClassUnseenData.png" alt="ROC Center Patch Classification Unseen Data" width="200">
 
 *Figure 9: ROC curves for center patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 

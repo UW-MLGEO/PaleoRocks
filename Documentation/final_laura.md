@@ -18,6 +18,7 @@ To promote robustness of our model and to increase the size of our training data
 We used a random rotation and a random flip layer. We allowed for random rotations within $\pm 90\degree$ and random horizontal and vertical flips. 
 
 ![Example of data augmentation for one patch](../Figures/Data-Examples/AugmentedDataExample.png)
+
 *Figure 3: Example of augmented patch data for one patch. The image was randomly flipped and rotated 9 different times.*
 
 As shown in **Figure 1B**, data for our whole patch classification model was skewed in favor of fossil data. Due to this disparity, our initial model learned that *everything* was a fossil. To combat this issue, we focused on augmenting the *non-fossil* data in the whole patch classification model. Conversely, as shown in **Figure 1C**, data for our center patch classification model was skewed in favor of non-fossil data. Thus, in this model, we focused on augmenting our *fossil* data. It should be noted that for the center patch classification model, we only allowed our images to be randomly flipped rather than flipped and/or rotated, as rotation may have skewed the center fossil in each patch. 

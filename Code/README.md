@@ -5,7 +5,20 @@ All CNN code can be found in the CNN folder, which is differentiated by center a
 The Image Preprocessing folder contains all code used to preprocess images for input into the CNN code. This includes code to resize the thin section images and to generate patches. 
 
 **Directory**
-- CNN/
-    - This folder contains all CNN code for each model. 
-- Image Preprocessing/
-    - This folder contains code to preprocess thin section images for input into a CNN model. 
+```
+├── Code/
+    ├── CNN/
+        ├── CNN_FirstIteration_CenterClassification.ipynb     # Final center classification model
+        ├── CNN_FirstIteration_WholePatch.ipynb               # Final whole patch model
+        ├── CNN_FirstIteration_Copy.ipynb
+        ├── Lucy_CNN_Attempt.ipynb
+        └── Confusion Matrices/
+            ├── First_Iteration_Confusion_Matrix.ipynb
+            └── Final_Iteration_Confusion_Matrix.ipynb
+    ├── Image Preprocessing/
+        ├── AddCenterDot.ipynb
+        ├── CreatePatches.ipynb
+        ├── Resolution_Updater.ipynb
+        └── ThinSectionExtraction.ipynb
+    └── ReadME.md
+```

@@ -29,11 +29,70 @@ Our testing data comprises images of thin sections from the same locality as our
 
 ## <u> Repository Structure </u>
 
-- Chart explaining the organization of our repository
+```
+Paleorocks/
+├── Code/
+|    ├── CNN/
+|        ├── CNN_FirstIteration_CenterClassification.ipynb     # Final center classification model
+|        ├── CNN_FirstIteration_WholePatch.ipynb               # Final whole patch model
+|        ├── CNN_FirstIteration_Copy.ipynb
+|        ├── Lucy_CNN_Attempt.ipynb
+|        └── Confusion Matrices/
+|            ├── First_Iteration_Confusion_Matrix.ipynb
+|            └── Final_Iteration_Confusion_Matrix.ipynb
+|    ├── Image Preprocessing/
+|        ├── AddCenterDot.ipynb
+|        ├── CreatePatches.ipynb
+|        ├── Resolution_Updater.ipynb
+|        └── ThinSectionExtraction.ipynb
+|    └── ReadME.md
+├── Documentation/
+|   ├── Final_Writeup.md
+│   └── ReadME.md                   
+├── Figures/
+│   ├── Data-Examples/                       
+│   ├── Model-Performance/                   
+│   ├── 469_Dahlia_Caption.jpg
+│   ├── 469_Dahlia_Panel.jpg
+│   ├── Dahlia_Figure.pdf
+|   ├── Sophia_Final_Figure.png
+│   └── ReadME.md
+└── ReadME.md                           
+```
 
 ## <u>Contents</u>
 
-- Summarize what each individual file contains
+The **code folder** contains all code. The **CNN subfolder** contains all code for CNN, as follows:
+
+- **CNN_FirstIteration_CenterClassification.ipynb**
+    - Contains all final code to generate and run a center classification model, along with performance metrics.
+- **CNN_FirstIteration_WholePatch.ipynb**
+    - Contains all final code to generate and run a center classification model, along with performance metrics.
+- **CNN_FirstIteration_Copy.ipynb**
+    - Contains initial CNN code that was later modified, kept for documentation of iterations.
+- **Lucy_CNN_Attempt.ipynb**
+    - Contains initial CNN code that was later modified to randomly select thin section images for testing data.
+-  **Confusion Matrices/**
+    - This folder contains code to generate confusion matrices based off of test and unseen data. 
+
+The **Image Preprocessing subfolder** contains all code to preprocess thin section images for use in the CNN models: 
+
+- **AddCenterDot.ipynb**
+    - Adds dot in the center of a thin section patch, used to classify training data for a center patch classification model.
+- **CreatePatches.ipynb**
+    - Contains functions for generating image patches from an input thin section on either a grid or at random.  
+- **Resolution_Updater.ipynb**
+    - Updates the resolution of a given thin section image to a user-specified size.
+- **ThinSectionExtraction.ipynb**
+    - Initial code to extract thin sections for testing data. A modified version was contained in the final CNN model codes. 
+
+The **Documentation folder** contains the final project writeup, including results of the model runs and discussions on future directions. 
+
+The **Figures folder** contains all relevant figures generated from the code and used in the documentation markdown files. The **Data-Examples subfolder** contains examples of each stage of our data preparation, including an example of patches of our training data, patches of the unseen data from CarbonateWorld, and an example of data augmentation on one patch of our training data. 
+
+The **Model-Performance subfolder** contains all images relevant to model performance, including loss and accuracy plots for both models, ROC plots for both models, confusion matrices, and tables of performance metrics. A full discussion of these results can be found in the **Final_Writeup.md**. 
+
+The figures folder also contains multipanel figures created by group members Dahlia Gietka and Sophia Robillard. Dahlia's figure gives a statistical breakdown of the image patch data used in the training and testing of our model, and Sophia's figure gives a general overview of our model and machine learning approach. 
 
 ### <u>Glossary</u>
 
@@ -50,6 +109,12 @@ Our testing data comprises images of thin sections from the same locality as our
 
 ### <u>References</u>
 
+- Chollet, Francois and others, 2015, Keras. https://keras.io
+
 - Flügel, E., 2010, Microfacies of Carbonate Rocks: Springer, Berlin, Heidelberg. http://link.springer.com/10.1007/978-3-662-08726-8. Checked March 2024.
 
+- Marques, C.S., Malafaia, E., Pereira, S., Santos, V.F., and Dufourq, E., 2025, A review of machine learning applications for identification and classification problems in paleontology: Ecological Informatics, v. 91, p. 103329, doi:10.1016/j.ecoinf.2025.103329.
+
 - Pruss, S.B., and Clemente, H., 2011, Assessing the Role of Skeletons in Early Paleozoic Carbonate Production: Insights from Cambro-Ordovician Strata, Western Newfoundland, in Laflamme, M., Schiffbauer, J.D., and Dornbos, S.Q., eds., Quantifying the Evolution of Early Life: Numerical Approaches to the Evaluation of Fossils and Ancient Ecosystems: Springer Netherlands, Dordrecht, p. 161–183. https://doi.org/10.1007/978-94-007-0680-4_7. Checked April 2024.
+
+

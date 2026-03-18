@@ -187,9 +187,9 @@ The final models in both cases do quite well at classifying the training and val
 Other metrics of performance that we evaluated included the following: 
 | **Metric**        | **Definition and When to Use**                                      | **Mathematical Formula and Approximate Target Value**|
 |--------------|------------------------------------------------|------------------------------------------------------|
-| **Precision**     | True positives out of total predicted positives, useful when high risk (or high cost) of false positives, gives measure of accuracy of positive predictions | $$ pr = \frac{TP}{TP+FP} \approx 1$$ |
-| **Recall (Sensitivity)** | True positives out of total actual positives, useful when high risk (or high cost) of false negatives, gives measure of how many actual positives found | $$ re = TPR = \frac{TP}{TP+FN}\approx 1 $$ |
-| **Specificity**   | True negatives out of total actual negatives, measure of how well we correctly predict negative values  | $$ sp = TNR = \frac{TN}{TN + FP} \approx 1$$ |
+| **Precision**     | True positives out of total predicted positives, useful when high risk (or high cost) of false positives, gives measure of accuracy of positive predictions | $pr = \frac{TP}{TP+FP} \approx 1$ |
+| **Recall (Sensitivity)** | True positives out of total actual positives, useful when high risk (or high cost) of false negatives, gives measure of how many actual positives found | $re = TPR = \frac{TP}{TP+FN}\approx 1$ |
+| **Specificity**   | True negatives out of total actual negatives, measure of how well we correctly predict negative values  | $sp = TNR = \frac{TN}{TN + FP} \approx 1$ |
 | **AUC**           | Area under ROC curve; plots true positive vs. false positive, probability that model ranks a random positive (fossil) higher than a random negative (non-fossil) | |
 
 *Table 2: Accuracy metrics. Note that TP is true positives, FP is false positives, TN is true negatives, and FN is false negatives. Also note that the metric we used in our model evaluation for specificity was **specificity at sensitivity**, which gives the highest achieved specificity for a pre-determined sensitivity rate, which we set at 90%.*

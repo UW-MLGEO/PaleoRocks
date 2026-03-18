@@ -226,9 +226,11 @@ Finally, we evaluated ROC curves to see how well our models compare to each othe
 
 *Figure 11: ROC curves for center patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
+No matter which thin sections we held back for testing, we were able to achieve similar performance results with each model. We tested this hypothesis by holding back different thin sections at random and rerunning our model training, with similar results each time for both models. 
+
 ## <u>Discussion</u>
 
-Overall, we found that both models performed quite well on our thin sections. The whole patch classification model slightly outperformed the center patch classification model. Although both models performed strongly on the test dataset, their performance dropped on the unseen dataset from CarbonateWorld. We argue that this drop in performance is not an issue for our purposes. Our goal is to learn to classify thin sections from a particular lab's data, where sections come from the same place and similar time periods. We demonstrated that this approach can learn to classify fossil vs. non-fossil data quite well on thin sections from a particular spatial and temporal area. While this model is not perfectly generalizable, as demonsrated by the relatively poor performance on the unseen data, the model is able to perform quite well for its intended use. This conclusion is backed up by the strong performance metrics across the test data set. No matter which thin sections we held back for testing, we were able to achieve similar results with each model (develop a figure for this...?).
+Overall, we found that both models performed quite well on our thin sections. The whole patch classification model slightly outperformed the center patch classification model. Although both models performed strongly on the test dataset, their performance dropped on the unseen dataset from CarbonateWorld. We argue that this drop in performance is not an issue for our purposes. Our goal is to learn to classify thin sections from a particular lab's data, where sections come from the same place and similar time periods. We demonstrated that this approach can learn to classify fossil vs. non-fossil data quite well on thin sections from a particular spatial and temporal area. While this model is not perfectly generalizable, as demonsrated by the relatively poor performance on the unseen data, the model is able to perform quite well for its intended use. This conclusion is backed up by the strong performance metrics across the test data set. 
 
 ## <u>Future Work</u>
 
@@ -236,7 +238,8 @@ There are many future directions for this work. In particular, we hope to develo
 
 - **Quantifying abundances**: Can we use our model to identify how many fossils are within a thin section (as in point counting) and develop clean code to do this? 
 - **Fossil Recognition**: Can we get our model to recognize specific fossils on the phylum level? This will require a multi-class implementation, rather than the binary class models shown above. 
-- **Model Tuning**: The model can be made more robust in a number of ways. Namely, we can implement cross validation, tune the top layers of the model, and compare multiple base models and optimizer choices, as this type of analysis is lacking in the paleontology machine learning literature. 
+- **Model Tuning**: The model can be made more robust in a number of ways. Namely, we can implement cross validation, tune the top layers of the model, and compare multiple base models and optimizer choices, as this type of analysis is lacking in the paleontology machine learning literature.
+- **Testing Workflow Implementation**: How many thin sections are needed to robustly train a machine learning model? How many thin sections must we train on to get accurate results for testing? These are questions we are actively exploring. 
 
 ## References
 - Flügel, E., 2010, Microfacies of Carbonate Rocks: Springer, Berlin, Heidelberg. http://link.springer.com/10.1007/978-3-662-08726-8.

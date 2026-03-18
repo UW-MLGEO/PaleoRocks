@@ -139,7 +139,7 @@ The top layers are:
 
 ### <u>Machine Learning Workflow</u>
 The final machine learning workflow for the model is as follows:
-<p align = "center">
+<div align="center">
 
 **Randomly Remove Thin Section for Testing Data**  
 
@@ -166,7 +166,7 @@ The final machine learning workflow for the model is as follows:
 &darr; 
 
 **Evaluate Model on Test and Unseen Data**
-</p>
+</div>
 
 
 This workflow is summarized in **Figure 4**. 

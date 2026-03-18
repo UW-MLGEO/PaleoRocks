@@ -58,6 +58,7 @@ With our model, we aim to build on the existing body of ML in paleontology by:
 ### Validation Data
 - The classified patches were randomly split into 80% training and 20% validation
 ![Example Patches](../Figures/Data-Examples/PatchesExample.png)
+
 *Figure 2: Example patches generated from our data. Patches labeled "1" contain fossils, while patches labeled "0" do not contain fossils".*
 
 ### Testing Data
@@ -66,6 +67,7 @@ With our model, we aim to build on the existing body of ML in paleontology by:
 - Carbonate thin section images were obtained from CarbonateWorld, an online database and teaching tool for carbonate petrography.
     - The model tested on patches generated from 10 different CarbonateWorld thin sections, from different lithofacies and time periods than our own dataset.
     ![CarbonateWorld Patches](../Figures/Data-Examples/UnseenDataExample.png)
+
     *Figure 3: Example patches generated from CarbonateWorld thin sections. As in Figure 2, patches labeled "1" contain a fossil, while patches labeled "0" do not.*
 
 ### <u> Outputs </u>
@@ -104,7 +106,7 @@ We used a random rotation and a random flip layer. We allowed for random rotatio
 
 ![Example of data augmentation for one patch](../Figures/Data-Examples/AugmentedDataExample.png)
 
-*Figure 3: Example of augmented patch data for one patch. The image was randomly flipped and rotated 9 different times.*
+*Figure 4: Example of augmented patch data for one patch. The image was randomly flipped and rotated 9 different times.*
 
 As shown in **Figure 1B**, data for our whole patch classification model was skewed in favor of fossil data. Due to this disparity, our initial model learned that *everything* was a fossil. To combat this issue, we focused on augmenting the *non-fossil* data in the whole patch classification model. Conversely, as shown in **Figure 1C**, data for our center patch classification model was skewed in favor of non-fossil data. Thus, in this model, we focused on augmenting our *fossil* data. It should be noted that for the center patch classification model, we only allowed our images to be randomly flipped rather than flipped and/or rotated, as rotation may have skewed the center fossil in each patch. 
 
@@ -171,14 +173,14 @@ This workflow is summarized in **Figure 4**.
 
 ![Sophia Final Figure: ML Workflow Summary](../Figures/Sophia_Final_Figure.png)
 
-*Figure 4: A machine learning workflow for patch generation and fossil classification is summarized.*
+*Figure 5: A machine learning workflow for patch generation and fossil classification is summarized.*
 ## <u>Results</u>
 Model accuracy and loss on the training and validation datasets increased and decreased, respectively, across each epoch of training. We saw a large jump in accuracy and loss once we finished training our top layers and began tuning the entire model. 
 
 ![Accuracy and Loss for Whole Patch Classification Model](../Figures/Model-Performance/LossAccWholePatch.png)
 ![Accuracy and Loss for Center Classification Model](../Figures/Model-Performance/LossAccCenterClassification.png)
 
-*Figure 5: Loss and accuracy plots for the whole patch (upper) and center patch (lower) classification models.*
+*Figure 6: Loss and accuracy plots for the whole patch (upper) and center patch (lower) classification models.*
 
 The final models in both cases do quite well at classifying the training and validation sets, with accuracy well over 90% in each case. In our final models, we were also able to overcome the tendency of the model to classify almost everything as having a fossil. 
 
@@ -196,7 +198,7 @@ Due to the tendency of our model to incorrectly classify negative (non-fossil) v
 
 <img src="../Figures/Model-Performance/PerformanceScoringChart.jpeg" alt="Model Performance Classification" width="200">
 
-*Figure 6: Model performance scoring chart*
+*Figure 7: Model performance scoring chart*
 
 With our tuned hyperparameters, we were able to achieve good performance values for the whole patch model on the test dataset, though the model performed relatively poorly on the unseen data from CarbonateWorld. 
 
@@ -204,7 +206,7 @@ With our tuned hyperparameters, we were able to achieve good performance values 
 
 <img src="../Figures/Model-Performance/WholePatchPerformanceUnseenData.png" alt="Model Performance Whole Patch Classification Unseen Data" width="600">
 
-*Figure 7: Whole patch classification model performance, with metrics color coded according to the chart given in **Figure 6**. We see that the model does quite well on the testing data set from our thin section data (upper chart) and worse on the unseen test data from CarbonateWorld (lower).*
+*Figure 8: Whole patch classification model performance, with metrics color coded according to the chart given in **Figure 6**. We see that the model does quite well on the testing data set from our thin section data (upper chart) and worse on the unseen test data from CarbonateWorld (lower).*
 
 The center patch classification model generally did not perform quite as well as the whole patch classification model. As with the whole patch classification model, the center classification model did well on our thin sections and poorly on the unseen test data. 
 
@@ -212,17 +214,17 @@ The center patch classification model generally did not perform quite as well as
 
 <img src="../Figures/Model-Performance/CenterPatchPerformanceUnseenData.png" alt="Model Performance Center Patch Classification Unseen Data" width="600">
 
-*Figure 8: Center patch classification model performance, with metrics color coded according to the chart given in **Figure 6**. We see that the model does quite well on the testing data set from our thin section data (upper chart) and worse on the unseen test data from CarbonateWorld (lower).*
+*Figure 9: Center patch classification model performance, with metrics color coded according to the chart given in **Figure 6**. We see that the model does quite well on the testing data set from our thin section data (upper chart) and worse on the unseen test data from CarbonateWorld (lower).*
 
 Finally, we evaluated ROC curves to see how well our models compare to each other and to a random model. 
 
 <img src="../Figures/Model-Performance/ROCWholePatch.png" alt="ROC Whole Patch Classification Test Sections" width="300"><img src="../Figures/Model-Performance/ROCWholePatchUnseenData.png" alt="ROC Whole Patch Classification Unseen Data" width="300">
 
-*Figure 9: ROC curves for whole patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
+*Figure 10: ROC curves for whole patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
 <img src="../Figures/Model-Performance/ROCCenterClass.png" alt="ROC Center Patch Classification Test Sections" width="300"><img src="../Figures/Model-Performance/ROCCenterClassUnseenData.png" alt="ROC Center Patch Classification Unseen Data" width="300">
 
-*Figure 9: ROC curves for center patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
+*Figure 11: ROC curves for center patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
 ## <u>Discussion</u>
 

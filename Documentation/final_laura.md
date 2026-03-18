@@ -131,11 +131,11 @@ The center patch classification model generally did not perform quite as well as
 
 Finally, we evaluated ROC curves to see how well our models compare to each other and to a random model. 
 
-<img src="../Figures/Model-Performance/ROCWholePatch.png" alt="ROC Whole Patch Classification Test Sections" width="200"><img src="../Figures/Model-Performance/ROCWholePatchUnseenData.png" alt="ROC Whole Patch Classification Unseen Data" width="200">
+<img src="../Figures/Model-Performance/ROCWholePatch.png" alt="ROC Whole Patch Classification Test Sections" width="300"><img src="../Figures/Model-Performance/ROCWholePatchUnseenData.png" alt="ROC Whole Patch Classification Unseen Data" width="300">
 
 *Figure 9: ROC curves for whole patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
-<img src="../Figures/Model-Performance/ROCCenterClass.png" alt="ROC Center Patch Classification Test Sections" width="200"><img src="../Figures/Model-Performance/ROCCenterClassUnseenData.png" alt="ROC Center Patch Classification Unseen Data" width="200">
+<img src="../Figures/Model-Performance/ROCCenterClass.png" alt="ROC Center Patch Classification Test Sections" width="300"><img src="../Figures/Model-Performance/ROCCenterClassUnseenData.png" alt="ROC Center Patch Classification Unseen Data" width="300">
 
 *Figure 9: ROC curves for center patch classification model. We see that the model does quite well on our isolated test thin sections (left) and worse but still better than a random model on the unseen data (right).*
 
